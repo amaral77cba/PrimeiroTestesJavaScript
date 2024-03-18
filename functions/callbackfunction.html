@@ -1,0 +1,34 @@
+<script>
+
+    //callback function eh uma especie de "chame de volta"
+
+    function sayMyName (name){
+        console.log(name)
+    }
+
+    //exemplificando que a funcao chama qualquer tipo de objeto
+    sayMyName("Nome")   //string
+    sayMyName(2)        //numero
+    sayMyName({nome: "Amarildo",    //objeto    
+                idade: 46,
+            sexo: "Masculino"})
+    sayMyName(          //outra function
+        () => {
+            console.log("Estou em uma callback")
+        }
+    )
+
+
+    console.log("")
+    function sayMyName2 (name){
+        console.log("Trecho antes do callback")
+        name()  //chamada para executar a funcao
+        console.log("Trecho apos o callback")
+    }
+
+    sayMyName2(
+        () => {
+            console.log("Estou em uma callback")
+        }
+    )
+</script>

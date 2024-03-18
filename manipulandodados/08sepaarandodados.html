@@ -1,0 +1,16 @@
+<script>
+    //Manipulando Strings e Arrays
+
+    //Separa um texto que contem espaços, em um novo array onde cada texto
+    //eh uma posicao do array. Depois disso, transforme um array em um texto
+    //e onde eram espaçoes coloque _
+
+    let phrase = "Eu quero viver o amor!"
+    let myArray = phrase.split(" ") //a parte do split eh o que eu quero separar no caso espaços
+    console.log(myArray)    //o split transforma em um array
+    
+    console.log(typeof myArray)
+
+    let phraseWithUnderscore = myArray.join("_")    //o join eh para juntar tudo e o parametro eh para indicar o que serah usado entre os campos que estao separados
+    console.log(phraseWithUnderscore)
+</script>

@@ -1,0 +1,40 @@
+<script>
+    //manipulando array com os metodos disponiveis
+
+    let techs = ["html", "css", "js"]
+
+
+    //adiciona um item no fim do array
+    techs.push("typescript")
+    console.log(techs)
+
+    //adiciona um item no começo do array
+    techs.unshift("sql")
+    console.log(techs)
+
+    //remover um item do final do array
+    techs.pop()
+    console.log(techs)
+
+    //remove um item no inicio do array
+    techs.shift()
+    console.log(techs)
+
+    //pegar somene alguns elementos do array
+    techs.slice(1, 3)   //slice eh cortar, parametros: posicao de inicio e tamanho do array
+    console.log(techs.slice(1, 3))
+    console.log(techs)
+
+    techs.push("nodejs")
+    techs.push("reactjs")
+    //para remover 1 ou mais posicoes do array
+    techs.splice(1,1)   //indice e quantidades de itens apartir do indice - remove o item "CSS"
+    console.log(techs)
+
+    //encontrar uma posicao do elemento no array para remover
+    let index = techs.indexOf("js")
+    console.log(index)
+    techs.splice(index,1)
+    console.log(techs)
+
+</script>

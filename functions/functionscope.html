@@ -1,0 +1,42 @@
+<script>
+    //function scope
+    //neste exemplo do video: https://biblioteca.rocketseat.com.br/javascript/funcoes/function-scope
+    //existem varias explicacoes que precisam ser entendidas, vou fazer algumas
+
+    let subject
+    subject = 'create video'
+    function createThink(subject){
+        return subject
+    }
+
+    console.log(subject)
+    console.log(createThink(subject))
+
+
+    console.log("")
+    let subject2
+    subject2 = 'create video'
+    function createThink2(subject2){
+        subject2 = 'study'
+        return subject2
+    }
+
+    console.log(subject2)
+    console.log(createThink2(subject2))
+
+    
+    console.log("")
+    let subject3
+    //subject3 = 'create video'
+    function createThink3(){
+        subject3 = 'study'
+        //return subject3
+    }
+    
+    console.log(createThink3())
+    console.log(subject3)    
+
+
+
+</script>
+</script>

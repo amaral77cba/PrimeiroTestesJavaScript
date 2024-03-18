@@ -1,0 +1,23 @@
+<script>
+    /*
+    Function constructor
+    * expressao new
+    * criar um novo objeto
+    * this keyword
+    * 
+    Eh vantajoso utilizar quando o precisa concentrar os valores em um objeto e ser utilizado ele como uma forma para varios outros objetos do mesmo tipo
+    */
+
+   function Person(name, age){
+    this.name = name
+    this.age = age
+    this.walk = function(){
+        return "andando"
+    }
+   }
+   const mayk = new Person("Mayk",45)
+   const jose = new Person("Jose",20)
+   console.log(mayk)
+   console.log(jose)
+   console.log(mayk.walk)
+</script>

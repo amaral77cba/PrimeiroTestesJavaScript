@@ -1,0 +1,50 @@
+<script>
+    //string
+    var texto = "Amarildo de Arruda"
+    console.log(texto)
+
+    //number
+    /*
+    33          inteiro (positivo/negativo)
+    12.5        reais float
+    NaN         not a number
+    Infinity    infnito
+    */
+    console.log(2 + 5)
+
+    //boolean
+    var isVascaino = true
+    console.log(isVascaino)
+
+    //undefined vs null
+    console.log( undefined === null)    //indefinido nao eh igual a nulo
+
+    //array
+    var listacompra = ["Arroz","Feijao","Ovo"]
+    console.log(listacompra)
+    console.log("Quantidade de ocorrencia: " + listacompra.length)
+    console.log(listacompra[1])// lista o item da posicao um
+
+
+    //object
+    /*
+        Eh um tipo de dado estrutural
+
+        * Propriedades
+        * Funcionalidades
+        
+    propriedade : "valor"
+    */
+    var objTeste = {
+                    nome: "Amarildo de Arruda Assumpção Silva",
+                    idade: 46,
+                    andar: function(){
+                       // console.log("funcionalidade andar")
+                    }
+                    }
+    console.log(objTeste)
+    console.log(typeof objTeste)
+    console.log(`${objTeste.nome} tem ${objTeste.idade} anos`)  //utilizando interpolacao
+
+    
+</script>

@@ -1,0 +1,19 @@
+<script>
+    //function hoisting (conceito que o JS consegue ler a parte inferior e jogar em memoria para ser utilizado)
+
+    sayMyName()
+
+    function sayMyName(){
+        console.log("Diga o meu nome")
+        //DESTA FORMA QUE ESTAH DECLARACA A FUNCTION REALIZA O HOSTING elevacao
+    }
+
+
+    console.log("")
+    sayMyName2()
+
+    const sayMyName2 = function(){
+        console.log("Diga o meu nome")
+        //DESTA FORMA nao realiza o HOSTING
+
+</script>

@@ -1,0 +1,75 @@
+<script>
+    //para declarar variavel utilizamos as opcoes VAR, LET e CONST
+
+    var clima = "Quente"
+    clima = "Quente demais" //var aceita sobreposicao
+    console.log(clima)
+
+    let temperatura = "Quarenta grau"
+    temperatura = "Quarenta grau 40º"   //let aceita sobreposicao
+    console.log(temperatura)
+
+    const chuva = "Leve"
+    //chuva = "Pesada"    //const nao aceita SOBREPOSICAO, (de fato eh uma CONSTANTE)
+    console.log(chuva)
+
+    //As variavel em JS eh fracamente tipada e dinamica, ou seja nao precisa definir o seu tipo 
+    //ela eh definido pelo valor que recebe
+    var coloracao   //neste exemplo somente criou a variavel sem definicao do tipo
+    console.log(coloracao)
+
+    let cor = "Vermelho"    //neste exemplo criou a variavel e atribuiu valor e implicitamente o JS reconheceu que eh uma String
+    console.log(cor)
+    console.log(typeof cor)
+
+    cor = 35    //eh uma linguagem DINAMICA, pode ser alterado o tipo de acordo com o valor recebido
+    console.log(cor)
+    console.log(typeof cor)
+
+
+
+    console.log("")
+    //var eh global e local (SCOPO)
+    //HOISTING
+    console.log("Existe x antes do bloco? " , x)    //nesta situacao o x tem valor undefined
+    {
+        var x = 0
+    }
+    console.log("Existe x depois do bloco? " , x)
+
+    //let e const (SCOPE) sao locais e soh funcionam no escopo onde foram criados
+    //console.log("Existe y antes do bloco? " , y)    //nesta situacao o y tem valor undefined
+    {        
+        let y = 0
+        console.log("Existe y dentro do bloco? " , y)    //nesta situacao o y tem valor, pq estah no escopo que foi criado         
+    }
+    let y = 1
+    console.log("Existe y depois do bloco? " , y)
+
+    //const nao pode ser alterado, porem em escopos diferentes pode ter o mesmo nome
+    const w = 1
+    {
+        {
+            const w = 0
+            console.log("Existe w? ", w)
+        }
+    }
+    console.log("Existe w depois do bloco? " , w)
+
+
+    //agrupamento de variaveis
+    var name = "Maik"
+
+    let age, isHuman
+    age = 30
+    isHuman = true
+
+    console.log("Imprimindo os tres valores num console soh: " + name, age, isHuman)
+    //concatenando textos e variaveis
+    console.log("O " + name + " tem " + age + " anos")
+    //interpolando
+    console.log(`O ${name} tem ${age} anos.`)   //utilizacao da crase para montar o texto
+
+
+    const [ciclo, setCiclo] = useState([]);
+</script>

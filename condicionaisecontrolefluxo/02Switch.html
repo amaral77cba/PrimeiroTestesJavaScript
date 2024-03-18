@@ -1,0 +1,49 @@
+<script>
+    //switch
+
+    let expression = "t"
+
+    switch(expression){
+        case "a":
+            //codigo
+            console.log("Valor a")
+            break
+        case "b":
+            //codigo
+            console.log("Valor b")
+            break
+        default:
+            //codigo
+            console.log("Valor outros")
+            break
+    }
+
+
+    console.log("")
+    //Calculadora
+
+    function caculate(number1, operator, number2){
+        let result = 0
+        switch(operator){
+            case "/":
+                result = number1 / number2
+                break
+            case "*":
+                result = number1 * number2
+                break
+            case "+":
+                result = number1 + number2
+                break
+            case "-":
+                result = number1 - number2
+                break
+            default:
+                console.log("Operador nao implementado")
+                break
+        }
+        return result
+    }
+
+    console.log(caculate(5, "+", 5))
+
+</script>

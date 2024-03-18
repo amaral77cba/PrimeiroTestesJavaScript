@@ -1,0 +1,24 @@
+<script>
+    //THROW - significa disparar, lançar
+
+    //TRY...CATCH - Cath significa pegar, capturar    e o try eh tentar
+
+    //Em resumo eh: Tentar executar um bloco de codigo e se der algum erro, vai ser disparado um erro e capturado na aplicacao
+
+
+    function sayMyName(name = ""){
+        if (name === "") {
+            throw new Error("Nome eh obrigatorio!")
+        }
+
+        console.log("Depois do erro")
+    }
+
+    try{
+        sayMyName("Arruda")
+    } catch(e){
+        console.log(e)
+    }
+
+    console.log("apos o try/catch")
+</script>

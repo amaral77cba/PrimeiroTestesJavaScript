@@ -1,0 +1,28 @@
+<script>
+    //if else
+
+    let temperature = 36.9
+
+    if (temperature >= 37.5){
+        console.log("Febre alta")
+    } else if (temperature < 37.5 && temperature >= 37){
+        console.log("Febre moderada")
+    } else {
+        console.log("Sem febre")
+    }
+
+
+    //outra forma de fazer as declaracoes
+    let temperature2 = 37
+    let highTemperature = temperature2 >= 37.5
+    let mediumTemperature = temperature2 < 37.5 && temperature2 >= 37
+
+    if (highTemperature){
+        console.log("Febre alta")
+    } else if (mediumTemperature){
+        console.log("Febre moderada")
+    } else {
+        console.log("Sem febre")
+    }
+
+</script>

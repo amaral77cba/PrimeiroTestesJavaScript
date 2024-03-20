@@ -1,0 +1,53 @@
+<script>
+    /*
+    SISTEMA DE GASTOS FAMILIAR
+
+    Crie um objeto que possuirah 2 propriedades, ambas do tipo array:
+    * receitas: []
+    * despesas: []
+    * 
+    Agora crie uma funcao para calcular o total de receitas e despesas e irah mostrar
+    uma mensagem se a familia estah com saldo positivo ou negativo, seguido do valor do saldo.
+    */
+
+    let familia = {
+        receitas: [1000, 2000, 550],
+        despesas: [1500, 1000, 2500, 450, 155.12]
+    }
+   
+    //funcao para somar os array, independente do qual array passar
+    function soma(array){
+        let total = 0
+
+        for (let valor of array){
+            total += valor
+        }
+        return total
+    }
+
+    function calcularBalanco(){
+        let saldo = 0
+        let textoSaldo = ""
+
+        const totalrec = soma(familia.receitas)
+        const totaldesp = soma(familia.despesas)
+        console.log(`Total de Receitas: ${totalrec.toFixed(2)} R$`)
+        console.log("Total de Despesas: " + totaldesp.toFixed(2))
+
+        saldo = totalrec - totaldesp
+
+        if (saldo >= 0){
+            textoSaldo = " Positivo"
+        } else {
+            textoSaldo = " Negativo"
+        }
+
+
+        return saldo.toFixed(2) + textoSaldo
+    }
+   
+    
+    
+    console.log("Saldo: " + calcularBalanco())
+   
+</script>

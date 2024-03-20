@@ -1,0 +1,106 @@
+<script>
+
+/* Transformar notas escolares
+
+    Crie um algoritmo que transforme as notas do sistema numerico
+    para sistemas de notas em caracteres com conceito A B C
+
+    - acima de 90 conceito      A
+    - entre 80 a 89 conceito    B
+    - entre 70 a 79 conceito    C
+    - entre 60 a 69 conceito    D
+    - menor que 60 conceito     F
+*/
+
+    
+    /*
+    let conceitoA = nota >= 90
+    let conceitoB = nota >= 80 && nota <= 89
+    let conceitoC = nota >= 70 && nota <= 79
+    let concetioD = nota >= 60 && nota <= 69
+    let conceitoF = nota < 60 && nota >= 0
+    */
+
+    /*switch(nota){
+        case "conceitoA":
+            console.log("O aluno possui conceito A")
+            break
+        case "conceitoB":
+            console.log("O aluno possui conceito B")
+            break
+        case "conceitoC":
+            console.log("O aluno possui conceito C")
+            break
+        case "conceitoD":
+            console.log("O aluno possui conceito D")
+            break
+        case "conceitoF":
+            console.log("O aluno possui conceito F")
+            break
+        default:
+            console.log("Nota inválida!")
+            break
+    }
+    */
+
+    function getNota(nota){
+
+        let conceitoA = nota >= 90 && nota <= 100
+        let conceitoB = nota >= 80 && nota <= 89
+        let conceitoC = nota >= 70 && nota <= 79
+        let conceitoD = nota >= 60 && nota <= 69
+        let conceitoF = nota < 60 && nota >= 0
+
+        let conceitoFinal;
+
+        if (conceitoA){
+            conceitoFinal = "A" 
+        } else if (conceitoB){
+            conceitoFinal = "B"
+        } else if (conceitoC){
+            conceitoFinal = "C"
+        } else if (conceitoD){
+            conceitoFinal = "D"
+        } else if (conceitoF){
+            conceitoFinal = "F"
+        } else {
+            conceitoFinal = "Nota Invalida"
+        }
+
+        return conceitoFinal
+    }
+
+
+    console.log("O aluno possui conceito: " + getNota(50))
+    console.log("O aluno possui conceito: " + getNota(91))
+    console.log("O aluno possui conceito: " + getNota(81))
+    console.log("O aluno possui conceito: " + getNota(61))
+    console.log("O aluno possui conceito: " + getNota(51))
+    console.log("O aluno possui conceito: " + getNota(101))
+    console.log("O aluno possui conceito: " + getNota(-1))
+
+
+    function getNota2(nota){
+    
+        let conceitoFinal;
+
+        if (nota >= 90 && nota <= 100){
+            conceitoFinal = "A" 
+        } else if (nota >= 80 && nota <= 89){
+            conceitoFinal = "B"
+        } else if (nota >= 70 && nota <= 79){
+            conceitoFinal = "C"
+        } else if (nota >= 60 && nota <= 69){
+            conceitoFinal = "D"
+        } else if (nota < 60 && nota >= 0){
+            conceitoFinal = "F"
+        } else {
+            conceitoFinal = "Nota Invalida"
+        }
+
+        return conceitoFinal
+    }
+
+    console.log(" ")
+    console.log("O aluno possui conceito: " + getNota2(50))
+</script>

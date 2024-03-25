@@ -1,0 +1,48 @@
+<script>
+    //Stack eh uma pilha, como uma pilha de livros (O ultimo a entrar eh o primeiro a sair da pilha) - LIFO
+
+    //passo 1 - modelagem
+    class Stack{
+        constructor(){
+            this.data = []
+            this.top = -1
+        }
+
+        //metodos da classe
+        //adicionar uma item ao data
+        push(value){
+            this.top ++
+            this.data[this.top] = value
+            return this.data
+        }
+
+        //excluir o ultimo elemento da pilha
+        pop(){
+            if (this.top < 0) return undefined 
+                const poppedTop = this.data[this.top]
+                delete this.data[this.top]
+                this.top --
+                return poppedTop            
+        }
+
+        //retorna o ultimo elemento da pilha
+        peek(){
+            return this.top >= 0 ? this.data[this.top] : undefined
+        }
+    }
+
+
+    //passo 2 - utilizacao
+    const stack = new Stack()
+    stack.push("learning")
+    stack.push("data")
+    console.log(stack.push("structures"))
+
+    console.log(stack.peek())
+
+    stack.pop()
+    console.log(stack.pop())
+    
+    console.log(stack.peek())
+    
+</script>

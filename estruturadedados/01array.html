@@ -1,0 +1,30 @@
+<script>
+    const pilotos = ["Senna", "Prost", "Shumacher", "Hamilton"]
+
+    console.log(pilotos[0]) //pega o conteudo de uma posicao
+
+    console.log(pilotos.length) //total de pilotos
+
+    //iteravel
+    for (let piloto of pilotos){
+        console.log(piloto)
+    }
+
+    //adicionar um elemento no final do array
+    pilotos.push('Alonso')
+    console.log(pilotos)
+
+    //encontrar um elemento no array    
+    const pilotoProcurado = pilotos.find(piloto => piloto === "Hamilton")
+    console.log(pilotoProcurado)
+
+    //remover um elemento do array
+    pilotos.splice(2, 1)
+    console.log(pilotos)
+
+    //ordem crescente
+    console.log(pilotos.sort())
+
+    //ordem decrescente
+    console.log(pilotos.reverse())
+</script>

@@ -81,7 +81,7 @@ const el = document.querySelector('body')
 console.log(el.childNodes)  //traz o resultado em Lista Node e considera os itens de espaço
 console.log(el.children)    //traz o resultado em HTML Collection
 console.log(el.firstElementChild)   //traz o primeiro elemento
-console.log(el.lastElementChild)    //tras o ultimo elemento
+console.log(el.lastElementChild)    //traz o ultimo elemento
 
 //nextSibling nextElementSibling (elementos IRMAOS)
 
@@ -99,3 +99,11 @@ div.innerText = 'Olah DEVs Quarenta e Cinco'
 const body3 = document.querySelector('body')
 body3.append(div)   //adiciona ao elemento no final
 //body3.prepend(div)  //adiciona o elemento no inicio
+
+//inserindo um elemento num ponto especifico
+const div2 = document.createElement('div')
+div2.innerText = 'Olah DEVs Setenta e set'
+const body4 = document.querySelector('body')
+const script2 = body4.querySelector('script')
+
+body3.insertBefore(div, script2) //primeiro parametro o que vai ser inserido, segundo o ponto TAG

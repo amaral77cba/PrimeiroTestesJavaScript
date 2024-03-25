@@ -1,0 +1,30 @@
+<script>
+    //Queue - FIFO (ilustracao de uma FILA)
+
+    class Queue{
+        constructor(){
+            this.data = []
+        }
+
+        //adicina um elemento no final da fila fila
+        enqueue (item){
+            this.data.push(item)
+            console.log(item + ' chegou na fila!')
+        }
+
+        //remove o primeiro elemento a entrar na fila
+        dequeue(){
+            const item = this.data.shift()
+            console.log(item + ' saiu da fila')
+        }
+    }
+
+
+    const fila = new Queue()
+    fila.enqueue('Mariana')
+    fila.dequeue('Mariana')
+    fila.enqueue('Ariel')
+    fila.enqueue('Juliana')
+    console.log(fila)
+
+</script>

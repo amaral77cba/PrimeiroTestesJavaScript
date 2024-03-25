@@ -1,0 +1,33 @@
+<script>
+    //HERANÇA
+    /*
+    - Pais e filhos
+    - Objetos que podem herdar ou estender caracteristicas bases
+    - Uma copia de atributos e metodos de outra classe
+    */
+
+   class Veiculo {
+    rodas = 4
+
+    mover(direcao){
+        this.direcao = direcao
+        return this.direcao
+    }
+
+    virar(direcao){
+
+    }
+   }
+
+   class Moto extends Veiculo{
+    constructor(){
+        super() //puxar atributos e metodos do pai
+        this.rodas = 2
+    }
+   }
+
+   const cg = new Moto()
+   cg.mover('Frente')
+   console.log('Quantidade de rodas da moto: ' + cg.rodas)
+   console.log('Andar para: ' + cg.mover("frente"))
+</script>

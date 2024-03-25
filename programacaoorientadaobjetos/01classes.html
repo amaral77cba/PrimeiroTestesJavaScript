@@ -1,0 +1,19 @@
+<script>
+    class Pessoa {
+
+        //Construtor
+        constructor(nome){
+            this.id = ~~(Math.random() * 100000)
+            this.nome = nome
+        }
+
+        //Metodos
+        falarNome(){
+            console.log(this.nome)
+        }
+    }
+
+    const pessoa = new Pessoa('Amaral')
+    console.log(pessoa)
+
+</script>

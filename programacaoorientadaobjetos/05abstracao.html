@@ -1,0 +1,56 @@
+<script>
+    //ABSTRACAO
+
+    //Template de uma classe que serah construida no futuro
+
+    //- atributos e metodos pode ser criados na classe de abastração (SUPERCLASSE)
+    //- a implementacao dos metodos e atributos, soh poderah ser feita na classe que irah herdar essa Abastracao
+
+
+    //SUPERCLASSE - ABSTRATA
+    class Parafuso {
+        constructor(){
+            if (this.constructo === Parafuso)
+                throw new Error('Classe abstrata noa pode ser instanciada')
+        }
+
+        get tipo(){
+            throw new Error('Metodo "get tipo()" precisa ser implementado')
+        }    
+    }
+
+    class Fenda extends Parafuso{
+        constructor(){
+            super()
+        }
+
+        get tipo () {
+            return 'fenda'
+        }
+    }
+
+    class Philips extends Parafuso{
+        constructor(){
+            super()
+        }
+
+        get tipo(){
+            return 'philips'
+        }
+    }
+
+    class Allen extends Parafuso{
+
+    }
+
+
+
+    //criar e usar
+    //new Parafuso() //classe parafuso por ser abstrata nao pode ser instanciada
+    let fenda = new Fenda()
+    let philips = new Philips()
+    let allen = new Allen()
+
+    console.log(fenda.tipo, philips.tipo)
+    console.log(allen.tipo)
+</script>

@@ -1,0 +1,20 @@
+<script>
+    class Poligono{
+        constructor(altura, largura){
+            this.altura = altura
+            this.largura = largura
+        }
+
+        get area(){
+            return this.#calcularArea()
+        }
+
+        //Esta funcao nao eh acessivel fora da classe, em funcao do #
+        #calcularArea(){
+            return this.altura * this.largura
+        }
+    }
+
+    poligono = new Poligono(10, 50)
+    console.log("A area do poligono eh: " + poligono.area)
+</script>

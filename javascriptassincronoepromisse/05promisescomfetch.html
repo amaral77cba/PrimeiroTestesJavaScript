@@ -1,0 +1,15 @@
+<script>
+
+    //As chamadas dos then que estar encadeado para conseguir retornar o ultimo valor acessivel
+
+    fetch('https://api.github.com/users/maykbrito') //recebe a URL para fazer o fetch (buscar)
+    .then( response => response.json())
+    .then( data => fetch(data.repos_url))
+    .then( res => res.json())    
+    .then( d => console.log(d))
+    .catch( erro => console.log(erro))
+    
+    
+   
+
+</script>

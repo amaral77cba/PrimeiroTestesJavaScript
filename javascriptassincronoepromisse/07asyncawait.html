@@ -1,0 +1,33 @@
+<script>
+    //Async / Await eh uma outra forma de trabalhar com o promisse
+
+
+    //Nao rodou o exercicio https://biblioteca.rocketseat.com.br/javascript/javascript-assincrono-e-promises/async-await-1
+
+    const promessa = new Promise( function(resolve, reject){
+        return resolve('OK')
+    })
+
+    async function start(){
+        try{
+            const result = await promessa
+            console.log(result)
+        } catch(e) {
+            console.log(e)
+        } finally{
+            console.log('rodar sempre')
+        }
+
+    }
+
+    //promessa
+    //    .then(function(response){
+    //        console.log(response)
+    //    })
+    //    .catch(function(error){
+    //        console.log(error)
+    //    })
+    //    .finally(function(){
+    //        console.log('Trecho que finaliza')})
+
+</script>

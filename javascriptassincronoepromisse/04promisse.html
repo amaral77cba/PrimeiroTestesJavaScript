@@ -1,0 +1,27 @@
+<script>
+    /*
+    PROMISSE
+
+    A promessa que algo irah acontecer
+    Pode dar certo ou errado 
+    Mas irah acontecer
+    */
+
+    console.log('PEDIR UBER')
+    let aceitarCorrida = false
+    
+    const promessa = new Promise((resolve, reject) => {
+        if (aceitarCorrida){
+            return resolve ('o carro chegou')
+        }
+        return reject('pedido negado')
+    })
+    
+    console.log('aguardando')
+    
+    promessa
+        .then(result => console.log(result))    //quando a promessa tiver um resultado imprime no console para o SUCESSO
+        .catch(erro => console.log(erro))       //tratamento para a parte do reject - erro
+        .finally(() => console.log('Finalizado APP UBER'))
+
+</script>

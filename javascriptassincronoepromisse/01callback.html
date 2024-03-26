@@ -1,0 +1,21 @@
+<script>
+    //CALLBACK - chamar de volta é uma funcao que é passada como argumento de outra funcao 
+    //          e depois de algum tempo ela é chamada de volta.
+
+    //funcoes aceitam qq tipo de dado como argumento
+    function imprimirDado(dado){
+        console.log(dado)
+    }
+
+
+    imprimirDado(1)
+    imprimirDado("uma palavra")
+    imprimirDado(true)
+    imprimirDado({nome:"Amarildo",idade:46})
+    imprimirDado([1, 2, 3, 4, 5])
+
+    console.log("")
+    imprimirDado(function () {})
+    imprimirDado(function () {return "Ola mundo"})
+</script>
+

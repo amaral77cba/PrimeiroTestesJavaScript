@@ -1,0 +1,41 @@
+<script>
+    //IMUTABILIDADE
+
+    //Uva variavel nao vai variar
+    //se voce precisa mudar uma variavel, voce nao muda, vc cria uma nova
+
+    //Exemplo em JS
+    const carrinho = {
+        quantidade: 2,
+        total: 200
+    }
+    console.log(carrinho)
+
+    //NAO se pode fazer ALTERAR uma propriedade de um objeto diretamente, deve ser criado uma nova variavel
+    carrinho.quantidade = 3    
+    console.log(carrinho)
+
+    console.log("")
+    //DEVE ser feito dessa outra forma
+    const novoCarrinho = {
+        ...carrinho, //esta instrucao copia todas as propriedades do objeto carrinho
+        quantidade: 3
+    }
+    console.log(novoCarrinho)
+
+
+
+    console.log("")
+    //Exemplo em ReactJS
+    const [amount, setAmount] = useState(0)
+
+    //nao se deve fazer dessa forma
+    amount = 2
+    console.log(amount)
+
+    //DEVE ser feito dessa forma
+    setAmount(3)
+    console.log(amount)
+
+
+</script>

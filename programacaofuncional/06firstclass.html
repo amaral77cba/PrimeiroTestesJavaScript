@@ -1,0 +1,18 @@
+<script>
+    //FIRST-CLASS FUNCTION
+
+    //Pode estar em qualquer lugar, inclusive, como parametro de outras funcoes
+    //A funcao poderah ser entendidad como uma variavel
+
+    /*
+    MEIO CONFUNSO ESSE CONCEITO DE FIRST-CLASS
+    */
+
+    const sayMyName = () => console.log('Amarildo') //foi criada uma constante de nome sayMyName como arrow function que irah dar como saida uma console.log
+    const runFunction = fn => fn()
+
+    runFunction(sayMyName)
+    runFunction(() => console.log('discover'))
+
+    console.log(runFunction(Math.random))
+</script>

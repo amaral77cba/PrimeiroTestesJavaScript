@@ -1,0 +1,32 @@
+<script>
+    //Funcao que eleva um numero ao quadrado
+
+    //IMPERATIVA ---------------------------
+    //dar ordem
+    //passo a passo
+    //uma coisa depende da outra
+    //o estado de um dado eh alterado constantemente causando mutacoes nas variaveis
+    //orientacao objeto eh um tipo de paradigma imperativo
+    let number = 2
+
+    function square(){
+        return number * number
+    }
+
+    number = square()
+    console.log(number)
+    console.log(square())
+    //--------------------------------------
+
+
+    //DECLARATIVA --------------------------
+    //o codigo eh gerado para fazer algo, nao importa como fazer
+    //o que fazer e nao como fazer
+    //nao ha necessidade de um passo a passo no codigo
+    //programacao funcional é um tipo de paradigma declarativo
+    const squareAux = n => n * n    //funcao em formato arrow
+
+    let n = 2
+    console.log(squareAux(n))
+    //--------------------------------------
+</script>

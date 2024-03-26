@@ -1,0 +1,46 @@
+<script>
+    //FUNCAO PURA
+    /*
+    * Nao devera depender de nenhum dado externo a nao ser o que foi passado como argumento
+    * Nao deverah sofrer nenhuma interferencia do mundo externo a ela
+    * Se o argumento eh o mesmo, o retorno nao pode ser diferente quando a funcao for chamada novamente
+    * Nao terah nenhum efeito colateral no seu codigo
+    *   - nao irah modificar nenhum dado
+    *   - nao irah guardar nenhum estado
+    */
+
+
+
+    //FUNCAO imPURA
+
+    //exemplo 1: está dependendo de dado externo que nao foi passado no parametro
+    function calculateCircunferencia(radius){
+        return Math.PI * (radius + radius)
+    }
+
+    //exemplo 2: está alterando dado externo
+    let person = {
+        name: "Rafael Carmada",
+        age: 25
+    }
+    function changeName(name){
+        person.name = name
+    }
+
+
+    //FUNCAO PURA
+
+    //exemplo 1: 
+    const calculateCircunference = function(pi, radius){
+        return pi * (radius + radius)
+    }
+
+    //com arrow function
+    const calculateCircunferenceAux = (pi, radius) => pi * (radius + radius)
+    
+    //exemplo 2
+    const changePersonName = (person, name) => ({...person, name})
+    console.log(person)
+    console.log(changePersonName(person, "Amarildo Silva"))
+
+</script>

@@ -1,0 +1,14 @@
+<script>
+    //COMPOSICAO DE FUNCOES
+
+    /*
+    * Um encadeamento de funcoes
+    * Uma funcao que retorna um dado e vai para outra funcao, que retorna um dado e vai para outra funcao que retorna um dado...
+    */
+
+    const people = ['Rafa', 'Diego', 'Dani', 'Mari']
+    const upperCasePeopleThatStartsWithD = people.filter(person => person.startsWith('D'))
+                                                .map(dperson => dperson.toUpperCase())
+
+    console.log(upperCasePeopleThatStartsWithD)
+</script>

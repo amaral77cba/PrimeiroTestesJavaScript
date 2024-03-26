@@ -1,0 +1,23 @@
+<script>
+    //STATELESS
+
+    //Nao guarda o ESTADO
+    //A funcao so conhece dados entregues a ela
+    //A resposta nao poderah variar
+
+    let number = 2
+
+    //statefull function
+    function square(){
+        return number * number
+    }
+    number = square()
+    //Neste exemplo acima a variavem number mudou de valores ao longo do codigo, inciando com 2 e alterando para 4
+    console.log(number)
+
+
+
+    //stateless function
+    const square2 = n => n * n
+    console.log(square2(2))
+</script>
